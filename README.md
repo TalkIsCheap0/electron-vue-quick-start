@@ -5,6 +5,15 @@ electron-vue-quick-start
   ```
   yarn
   ```
+  如果是windows可能需要重新编译
+  * 安装编译环境
+   ```
+  yarn global add windows-build-tools
+   ```
+   * 进入工程目录，重新编译
+   ```
+  yarn run rebuildnew
+   ```
 * vue前端
   ```
   yarn run serve
