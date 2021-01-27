@@ -13,3 +13,14 @@ electron-vue-quick-start
   ```
   yarn start
   ```
+
+* 打包程序
+  ```
+  yarn run release
+  ```
+  也可只打windows、mac、linux其中一种
+  ```
+  yarn run release:win
+  yarn run release:mac
+  yarn run release:linux
+  ```
