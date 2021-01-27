@@ -5,6 +5,7 @@ import robotjs from 'robotjs';
 process.environment = process.argv[2] && (process.argv[2] === 'dev' || process.argv[2] === 'prod') ?
   process.argv[2] as typeof process.environment : 'prod';
 console.log(path.join(process.cwd(), 'dist/frontEnd/index.html'));
+console.log(process.environment);
 // tslint:disable-next-line:no-var-requires
 ioHook.start(false);
 const eventHandler = function (type: string) {
@@ -42,7 +43,8 @@ ioHook.on('mouseclick', () => {
 ioHook.on('mousedown', () => {
   eventHandler('mousedown');
 });
-ioHook.on('mouseup', () => {
+ioHook.on('mouseup', (e) => {
+  console.log(e);
   eventHandler('mouseup');
 });
 ioHook.on('mousedrag', () => {

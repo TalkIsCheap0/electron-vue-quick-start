@@ -1,5 +1,5 @@
 {
-  "name": "electron-vue-quick-start",
+  "name": "electron-translate",
   "version": "0.1.0",
   "private": true,
   "main": "convert/main.js",
@@ -8,7 +8,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "watch": "tsc -w",
-    "start": "electron .",
+    "start": "npm run build && electron .",
     "release": "npm run build && electron-builder",
     "release:win": "npm run build && electron-builder -w",
     "release:mac": "npm run build && electron-builder -m",
@@ -52,8 +52,11 @@
     ]
   },
   "build": {
+    "directories": {
+      "output": "resources"
+    },
     "extraResources": {
-      "from": "./dist/frontEnd",
+      "from": "./resources/frontEnd",
       "to": "frontEnd"
     }
   }
