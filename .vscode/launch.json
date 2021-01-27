@@ -1,10 +1,15 @@
 {
     "version": "0.2.0",
+    "resolveSourceMapLocations": [
+      "${workspaceFolder}/**",
+      "!**/node_modules/**"
+    ],
     "configurations": [
       {
         "name": "Debug Main Process",
         "type": "node",
         "request": "launch",
+        "console": "integratedTerminal",
         "cwd": "${workspaceFolder}",
         "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron",
         "runtimeArgs" : [".","dev"]
